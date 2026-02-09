@@ -1,6 +1,11 @@
-﻿namespace DbMetaTool.Models
+﻿using Microsoft.VisualBasic.FileIO;
+
+namespace DbMetaTool.Models
 {
-    internal class DomainData
-    {
-    }
+    public record DomainData
+    (
+        string Name,
+        int FieldType,
+        int Length
+    );
 }
