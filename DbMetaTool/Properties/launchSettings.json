@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DbMetaTool": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
