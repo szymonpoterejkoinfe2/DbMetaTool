@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\DbMetaTool\\",
+  "WorkspaceRootPath": "C:\\Users\\Szymon\\Desktop\\Rekrutacja\\DbMetaTool\\DbMetaTool\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5E764EE7-FB30-4DFC-8E3E-8A1BB28DAD56}|DbMetaTool.csproj|f:\\dbmetatool\\services\\firebirdmetadatareader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E764EE7-FB30-4DFC-8E3E-8A1BB28DAD56}|DbMetaTool.csproj|solutionrelative:services\\firebirdmetadatareader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E764EE7-FB30-4DFC-8E3E-8A1BB28DAD56}|DbMetaTool.csproj|f:\\dbmetatool\\commands\\builddatabasecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E764EE7-FB30-4DFC-8E3E-8A1BB28DAD56}|DbMetaTool.csproj|solutionrelative:commands\\builddatabasecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E764EE7-FB30-4DFC-8E3E-8A1BB28DAD56}|DbMetaTool.csproj|f:\\dbmetatool\\models\\domaindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E764EE7-FB30-4DFC-8E3E-8A1BB28DAD56}|DbMetaTool.csproj|solutionrelative:models\\domaindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E764EE7-FB30-4DFC-8E3E-8A1BB28DAD56}|DbMetaTool.csproj|f:\\dbmetatool\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E764EE7-FB30-4DFC-8E3E-8A1BB28DAD56}|DbMetaTool.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5E764EE7-FB30-4DFC-8E3E-8A1BB28DAD56}|DbMetaTool.csproj|c:\\users\\szymon\\desktop\\rekrutacja\\dbmetatool\\dbmetatool\\config\\connectionstringmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E764EE7-FB30-4DFC-8E3E-8A1BB28DAD56}|DbMetaTool.csproj|solutionrelative:config\\connectionstringmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FirebirdMetadataReader.cs",
-              "DocumentMoniker": "F:\\DbMetaTool\\Services\\FirebirdMetadataReader.cs",
-              "RelativeDocumentMoniker": "Services\\FirebirdMetadataReader.cs",
-              "ToolTip": "F:\\DbMetaTool\\Services\\FirebirdMetadataReader.cs",
-              "RelativeToolTip": "Services\\FirebirdMetadataReader.cs",
+              "Title": "ConnectionStringManager.cs",
+              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Rekrutacja\\DbMetaTool\\DbMetaTool\\Config\\ConnectionStringManager.cs",
+              "RelativeDocumentMoniker": "Config\\ConnectionStringManager.cs",
+              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Rekrutacja\\DbMetaTool\\DbMetaTool\\Config\\ConnectionStringManager.cs",
+              "RelativeToolTip": "Config\\ConnectionStringManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T09:51:47.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BuildDatabaseCommand.cs",
-              "DocumentMoniker": "F:\\DbMetaTool\\Commands\\BuildDatabaseCommand.cs",
-              "RelativeDocumentMoniker": "Commands\\BuildDatabaseCommand.cs",
-              "ToolTip": "F:\\DbMetaTool\\Commands\\BuildDatabaseCommand.cs",
-              "RelativeToolTip": "Commands\\BuildDatabaseCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T09:51:11.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DomainData.cs",
-              "DocumentMoniker": "F:\\DbMetaTool\\Models\\DomainData.cs",
-              "RelativeDocumentMoniker": "Models\\DomainData.cs",
-              "ToolTip": "F:\\DbMetaTool\\Models\\DomainData.cs",
-              "RelativeToolTip": "Models\\DomainData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T09:50:19.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\DbMetaTool\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "F:\\DbMetaTool\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T09:24:38.916Z",
+              "WhenOpened": "2026-02-10T02:18:01.831Z",
               "EditorCaption": ""
             }
           ]

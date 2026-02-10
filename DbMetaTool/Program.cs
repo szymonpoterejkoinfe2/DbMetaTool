@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DbMetaTool.Commands;
+using System;
 using System.IO;
 
 namespace DbMetaTool
@@ -11,7 +12,7 @@ namespace DbMetaTool
         // DbMetaTool update-db --connection-string "..." --scripts-dir "C:\scripts"
         public static int Main(string[] args)
         {
-            if (args.Length == 0)
+           if (args.Length == 0)
             {
                 Console.WriteLine("Użycie:");
                 Console.WriteLine("  build-db --db-dir <ścieżka> --scripts-dir <ścieżka>");
@@ -81,12 +82,13 @@ namespace DbMetaTool
         /// </summary>
         public static void BuildDatabase(string databaseDirectory, string scriptsDirectory)
         {
-            // TODO:
-            // 1) Utwórz pustą bazę danych FB 5.0 w katalogu databaseDirectory.
-            // 2) Wczytaj i wykonaj kolejno skrypty z katalogu scriptsDirectory
-            //    (tylko domeny, tabele, procedury).
-            // 3) Obsłuż błędy i wyświetl raport.
-            throw new NotImplementedException();
+            var builder = new BuildDatabaseCommand();
+            var result = builder.ExecuteAsync(databaseDirectory, scriptsDirectory).Result;
+
+            if (result.IsFailure)
+            {
+                throw new Exception(result.Error);
+            }
         }
 
         /// <summary>
@@ -94,23 +96,26 @@ namespace DbMetaTool
         /// </summary>
         public static void ExportScripts(string connectionString, string outputDirectory)
         {
-            // TODO:
-            // 1) Połącz się z bazą danych przy użyciu connectionString.
-            // 2) Pobierz metadane domen, tabel (z kolumnami) i procedur.
-            // 3) Wygeneruj pliki .sql / .json / .txt w outputDirectory.
-            throw new NotImplementedException();
-        }
+            var exporter = new ExportScriptsCommand(connectionString);
+            var result = exporter.ExecuteAsync(outputDirectory).Result;
 
+            if (result.IsFailure)
+            {
+                throw new Exception(result.Error);
+            }
+        }
         /// <summary>
         /// Aktualizuje istniejącą bazę danych Firebird 5.0 na podstawie skryptów.
         /// </summary>
         public static void UpdateDatabase(string connectionString, string scriptsDirectory)
         {
-            // TODO:
-            // 1) Połącz się z bazą danych przy użyciu connectionString.
-            // 2) Wykonaj skrypty z katalogu scriptsDirectory (tylko obsługiwane elementy).
-            // 3) Zadbaj o poprawną kolejność i bezpieczeństwo zmian.
-            throw new NotImplementedException();
+            var updater = new UpdateDatabaseCommand(connectionString);
+            var result = updater.ExecuteAsync(scriptsDirectory).Result;
+
+            if (result.IsFailure)
+            {
+                throw new Exception(result.Error);
+            }
         }
     }
 }

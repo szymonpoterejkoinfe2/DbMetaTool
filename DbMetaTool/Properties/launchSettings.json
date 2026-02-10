@@ -1,7 +1,8 @@
 {
   "profiles": {
     "DbMetaTool": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "update-db --connection-string \"User=sysdba;Password=masterkey;Server=localhost;Charset=UTF8;Database=C:\\Users\\Szymon\\Desktop\\test\\recreate\\DATABASE.FDB\" --scripts-dir \"C:\\Users\\Szymon\\Desktop\\test2\""
     },
     "Container (Dockerfile)": {
       "commandName": "Docker"

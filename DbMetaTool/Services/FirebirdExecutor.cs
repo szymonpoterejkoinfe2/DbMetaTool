@@ -12,6 +12,10 @@ namespace DbMetaTool.Services
             _connectionString = connectionString;
         }
 
+        /// <summary>
+        /// Wykonuje asynchronicznie polecenie SQL niebędące zapytaniem (np. DDL lub DML).
+        /// </summary>
+        /// /// <param name="sql">Tekst polecenia SQL do wykonania.</param>
         public async Task<Result> ExecuteNonQueryAsync(string sql)
         {
             try
@@ -26,17 +30,24 @@ namespace DbMetaTool.Services
             }
             catch (Exception ex)
             {
-                return Result.Fail($"SQL execution error: {ex.Message}");
+                return Result.Fail($"Błąd skryptu SQL: {ex.Message}");
             }
         }
 
-        // wersja bez parametrów (domyślna)
+        /// <summary>
+        /// Wykonuje asynchronicznie zapytanie SQL bez parametrów i zwraca czytnik danych <see cref="FbDataReader"/>.
+        /// </summary>
+        /// <param name="sql">Tekst zapytania SQL do wykonania.</param>
         public async Task<Result<FbDataReader>> ExecuteReaderAsync(string sql)
         {
             return await ExecuteReaderAsync(sql, null);
         }
 
-        // wersja z parametrami
+        /// <summary>
+        /// Wykonuje asynchronicznie zapytanie SQL i zwraca czytnik danych <see cref="FbDataReader"/>.
+        /// </summary>
+        /// <param name="sql">Tekst zapytania SQL do wykonania.</param>
+        /// <param name="parameters">Opcjonalny słownik parametrów (klucz-wartość), które zostaną bezpiecznie wstrzyknięte do zapytania.</param>
         public async Task<Result<FbDataReader>> ExecuteReaderAsync(string sql, Dictionary<string, object>? parameters)
         {
             try
@@ -46,7 +57,6 @@ namespace DbMetaTool.Services
 
                 var cmd = new FbCommand(sql, con);
 
-                // jeśli podano parametry, dodajemy je
                 if (parameters != null)
                 {
                     foreach (var param in parameters)
@@ -61,7 +71,7 @@ namespace DbMetaTool.Services
             }
             catch (Exception ex)
             {
-                return Result<FbDataReader>.Fail($"Failed to execute query: {ex.Message}");
+                return Result<FbDataReader>.Fail($"Błąd przy wykonaniu zapytania: {ex.Message}");
             }
         }
     }
